@@ -1,5 +1,4 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here!! */
-
+/* Use your own code or past solution for Great Idea Web Page CSS here! */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -32,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.05;
 }
 ol, ul {
 	list-style: none;
@@ -57,196 +56,305 @@ table {
 
 html, body {
     height: 100%;
+    line-height: 1;
     font-family: 'Titillium Web', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
+
+p {
+    line-height: 1.1;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 .container {
-    width: 880px;
-    margin: auto;
+	width: 876px;
+	margin: 0px auto;
 }
 
-/* Header Styles */
-
-header {
-    width: 100%;
+.nav-content {
     display: flex;
-}
-
-header nav {
-    margin-top: 40px; 
-    width: 610px;
     justify-content: space-between;
-    display: flex;
+    align-items: center;
+    margin-top: 30px;
 }
 
-header nav a {
-    text-decoration: none;
-    color: #b0b0b0;
+nav {
+	display: flex;
+    width: 69%;
+	justify-content: space-between;
 }
 
-header nav a:hover {
-    text-decoration: underline;
-    color: black;
+.nav-button {
+	text-decoration: none;
+    color: grey;
+	transition: transform 0.4s;
 }
 
-header .logo {
-    margin: 28px 0 0 91px;
+.nav-button:hover {
+	transform: scale(1.2);
 }
-
-/* Call To Action (CTA) Styles */
 
 .cta {
+    width: 100%;
     display: flex;
-    margin-top: 72px;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-top: 65px;
+    padding-left: 126px;
+    margin-bottom: 79px;
 }
 
-.cta .cta-text {
-    font-size: 72px;
+.cta-text {
     text-align: center;
-    letter-spacing: 5px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-flow: column;
-    align-items: center;
-    margin: 0 82px 0 0;
 }
 
-.cta .cta-text button {
-    border: 1px double black;
-    font-size: 16px;
-    background: white;
-    width: 170px;
-    height: 32px;
-    margin-top: 10px;
-    cursor: pointer;
+.innovation {
+    font-size: 72px;
+    margin-bottom: 30px;
 }
 
-.cta .cta-text button:hover {
-    background: black;
-    color: white;
+.get-started a {
+	text-decoration: none;
+    border: 1px solid black;
+    padding: 3px;
+	padding-left: 45px;
+	padding-right: 45px;
+	color: black;
+    transition: 0.5s;
+    font-size: 17px;
 }
 
-/* Main Content Styles */
-
-.main-content {
-   border-top: 2px solid black; 
-   border-bottom: 2px solid black;
-   margin: 75px 0 35px 0;
-   padding: 35px 0;
-   font-size: 16px;
-   line-height: 18px;
+.get-started a:hover {
+    background: darkblue;
+    border:1px solid lightcyan;
+    color: lightcyan;
 }
 
-.main-content .top-content {
+.top-content {
+	border-top: 1px solid black;
+	display: flex;
+	padding-top: 35px;
+}
+
+.middle-img {
+	padding-top: 32px;
+	padding-bottom: 26px;
+}
+
+.bottom-content {
+	border-bottom: 1px solid black;
+	padding-bottom: 38px;
     display: flex;
 }
 
-.main-content .middle-img {
-    display: block;
-    margin: 30px auto;
+.bottom-content div {
+    width: 31.2%
 }
 
-.main-content .bottom-content {
-    display: flex;
+.services, .product {
+    margin-right: 20px;
 }
 
-.main-content .bottom-content p {
-    padding-right: 20px;
+.contact {
+	margin-top: 33px;
 }
-
-/* Contact Styles */
 
 .contact p {
-    margin: 15px 0;
+    margin-bottom: 12px;
 }
 
-/* Footer Styles */
-
-footer {
-    text-align: center;
-    margin: 40px 0 20px;
-}
-
-/* Services Styles */
-
-.services-content {
+address {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    line-height: 1.3;
+    flex-direction: column;
+    align-content: space-between;
 }
 
-.services-content .services-header-img {
-    margin: 20px 0;
+.copyright {
+	text-align: center;
+	margin-top: 28px;
+	margin-bottom: 40px;
+	font-size: 16px;
 }
 
-.services-content h1 {
-    font-size: 26px;
-    margin: 10px 0;
+@media (max-width: 800px) {
+
+    .container {
+        width: 760px;
+        margin-left: 20px;
+    }
+    
+    .cta-img {
+        display: none;
+    }
+
+    .nav-content {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 36px;
+    }
+
+    nav {
+        width: 100%;
+        order: 1;
+        padding-right: 41px;
+        padding-left: 9px;
+    }
+
+    .cta {
+        justify-content: center;
+        margin-top: 74px;
+        margin-bottom: 84px;
+        padding-left: 0;
+    }
+    
+    .innovation {
+        margin-bottom: 32px;
+    }
+    
+    .top-content {
+        padding-left: 10px;
+    }
+
+    .features, .about {
+        width: 48%;
+    }
+
+    .features {
+        margin-right: 20px;
+    }
+
+    .top-content {
+        display: flex;
+        padding-top: 35px;
+    }
+    
+    .middle-img {
+        width: 100%;
+        padding-bottom: 28px;
+    }
+    
+    .bottom-content {
+        padding-bottom: 36px;
+        display: flex;
+        padding-left: 10px;
+    }
+    
+    .bottom-content div {
+        width: 28.5%
+    }
+    
+    .services, .product {
+        margin-right: 39px;
+    }
+
+    .contact {
+        margin-top: 35px;
+        padding-left: 10px;
+    }
+    
+    .contact p {
+        margin-bottom: 12px;
+    }
+
+    .contact h2 {
+        margin-bottom: 16px;
+    }
 }
 
-.services-content .services-text {
- border-bottom: 1px solid black;
- padding-bottom: 40px;
- margin-bottom: 20px
-}
+@media (max-width: 500px) {
 
-.services-content .card {
-    padding: 20px;
-    border: 1px solid black;
-    width: 420px;
-    background: whitesmoke;
-    margin: 20px 0;
-}
+    .container {
+        width: 460px;
+    }
+    
+    .nav-content {
+        margin-top: 19px;
+    }
 
-.services-content .card button {
-    padding: 10px 40px;
-    margin-top: 20px;
-    cursor: pointer;
-    background: white;
-    border-radius: 5px;
-    border: 1px solid black;
-}
+    .logo {
+        margin-bottom: 20px;
+    }
 
-.services-content .card button:hover {
-    background: black;
-    color: white;
-} 
+    nav {
+        flex-direction: column;
+        width: 500px;
+        padding-right: 0;
+        padding-left: 0;
+    }
 
-.services-content .services-info ul {
-    margin: 20px;
-}
+    .nav-button {
+        border-top: 1px solid black;
+        text-align: center;
+        padding: 19.8px;
+        font-size: 20px;
+    }
 
-.services-content .services-info ul li{
-    list-style: square;
-    padding: 5px;
-}
+    nav a:last-child {
+        border-bottom: 1px solid black;
+    }
 
-.services-content .services-info {
-    display: flex;
-    flex-wrap: wrap;
-    border-top: 2px solid black; 
-    margin: 20px 0 35px 0;
-    padding-top: 40px; 
-}
+    .nav-button:hover {
+        transform: scale(1.2s);
+    }
 
-.services-content .services-info .facts {
-  width: 400px;
-  margin: 0 60px 20px 0;
-}
+    .cta {
+        margin-top: 52px;
+        margin-bottom: 83px;
+    }
+    
+    .top-content {
+        padding-left: 0;
+        flex-direction: column;
+        padding-top: 59px;
+    }
 
-.services-content .services-info .facts p {
-  margin-bottom: 20px;
-}
+    .features, .about {
+        width: 95%;
+    }
 
-.services-content .services-info .services-info-img {
-  width: 420px;
-  height: 300px;
+    .features {
+        margin-right: 0;
+        margin-bottom: 45px;
+    }
+    
+    .about {
+        margin-bottom: 21px;
+    }
+    
+    .bottom-content {
+        padding-left: 0;
+        flex-direction: column;
+    }
+    
+    .bottom-content div {
+        width: 95%;
+        margin-bottom: 63px;
+    }
+
+    .bottom-content .vision {
+        margin-bottom: 0px;
+    }
+
+    .contact {
+        margin-top: 35px;
+        padding-left: 0;
+    }
+    
+    .contact p {
+        margin-bottom: 12px;
+    }
+
+    .contact h2 {
+        margin-bottom: 16px;
+    }
 }
