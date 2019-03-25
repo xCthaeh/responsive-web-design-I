@@ -133,9 +133,9 @@ nav {
 }
 
 .get-started a:hover {
-    background: darkblue;
-    border:1px solid lightcyan;
-    color: lightcyan;
+    background: green;
+    border:1px solid darkgreen;
+    color: black;
 }
 
 .top-content {
